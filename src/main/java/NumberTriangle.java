@@ -50,8 +50,6 @@ public class NumberTriangle {
     public int getRoot() {
         return root;
     }
-
-
     /**
      * [not for credit]
      * Set the root of this NumberTriangle to be the max path sum
@@ -138,6 +136,7 @@ public class NumberTriangle {
 
             if (previousRow != null) {
                 for  (int i = 0; i < previousRow.length; i++) {
+                    assert previousRow[i] != null;
                     previousRow[i].setLeft(currentRow[i]);
                     previousRow[i].setRight(currentRow[i + 1]);
                 }
